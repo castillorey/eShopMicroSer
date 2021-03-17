@@ -63,3 +63,5 @@ D:\DEV\Test\eShopMicroSer\src\Basket\Basket.API\obj\Debug\net5.0\Basket.API.dll
 D:\DEV\Test\eShopMicroSer\src\Basket\Basket.API\obj\Debug\net5.0\ref\Basket.API.dll
 D:\DEV\Test\eShopMicroSer\src\Basket\Basket.API\obj\Debug\net5.0\Basket.API.pdb
 D:\DEV\Test\eShopMicroSer\src\Basket\Basket.API\obj\Debug\net5.0\Basket.API.genruntimeconfig.cache
+D:\DEV\Test\eShopMicroSer\src\Basket\Basket.API\bin\Debug\net5.0\EventBusRabbitMQ.dll
+D:\DEV\Test\eShopMicroSer\src\Basket\Basket.API\bin\Debug\net5.0\EventBusRabbitMQ.pdb

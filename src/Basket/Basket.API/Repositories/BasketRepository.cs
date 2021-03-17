@@ -1,6 +1,6 @@
-﻿using Basket.API.Entities;
+﻿using Basket.API.Data;
+using Basket.API.Entities;
 using Basket.API.Repositories.Interfaces;
-using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
@@ -9,18 +9,19 @@ namespace Basket.API.Repositories
 {
     public class BasketRepository : IBasketRepository
     {
-        private readonly IDistributedCache _redisCache;
+        private readonly IBasketContext _context;
 
-        public BasketRepository(IDistributedCache cache)
+        public BasketRepository(IBasketContext context)
         {
-            _redisCache = cache ?? throw new ArgumentNullException(nameof(cache));
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public async Task<ShoppingCart> GetBasket(string userName)
         {
-            var basket = await _redisCache.GetStringAsync(userName);
+            var basket = await _context
+                                .Redis.StringGetAsync(userName);
 
-            if (String.IsNullOrEmpty(basket))
+            if (basket.IsNullOrEmpty)
                 return null;            
 
             return JsonConvert.DeserializeObject<ShoppingCart>(basket);
@@ -28,14 +29,21 @@ namespace Basket.API.Repositories
         
         public async Task<ShoppingCart> UpdateBasket(ShoppingCart basket)
         {
-            await _redisCache.SetStringAsync(basket.UserName, JsonConvert.SerializeObject(basket));
-            
+            var updated = await _context.Redis.StringSetAsync(basket.UserName, JsonConvert.SerializeObject(basket));
+
+            if (!updated)
+            {
+                return null;
+            }
+
             return await GetBasket(basket.UserName);
         }
 
-        public async Task DeleteBasket(string userName)
+        public async Task<bool> DeleteBasket(string userName)
         {
-            await _redisCache.RemoveAsync(userName);
+            return await _context.
+                    Redis.KeyDeleteAsync(userName);
         }
+
     }
 }

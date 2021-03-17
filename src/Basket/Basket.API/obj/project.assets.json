@@ -2112,6 +2112,20 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "EventBusRabbitMQ/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "compile": {
+          "bin/placeholder/EventBusRabbitMQ.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventBusRabbitMQ.dll": {}
+        }
       }
     }
   },
@@ -7173,6 +7187,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "EventBusRabbitMQ/1.0.0": {
+      "type": "project",
+      "path": "../../Common/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+      "msbuildProject": "../../Common/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7181,6 +7200,7 @@
       "AspNetCore.HealthChecks.UI.Client >= 5.0.1",
       "AutoMapper >= 10.1.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
+      "EventBusRabbitMQ >= 1.0.0",
       "Grpc.AspNetCore >= 2.36.0",
       "MassTransit >= 7.1.6",
       "MassTransit.AspNetCore >= 7.1.6",
@@ -7225,7 +7245,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\DEV\\Test\\eShopMicroSer\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj": {
+              "projectPath": "D:\\DEV\\Test\\eShopMicroSer\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
