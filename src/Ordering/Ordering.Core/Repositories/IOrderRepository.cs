@@ -1,13 +1,11 @@
 ﻿using Ordering.Core.Entities;
-using System;
+using Ordering.Core.Repositories.Base;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Ordering.Core.Repositories
 {
-    public interface IOrderRepository
+    public interface IOrderRepository : IRepository<Order>
     {
         Task<IEnumerable<Order>> GetOrdersByUserName(string userName);
     }
