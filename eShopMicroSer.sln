@@ -9,21 +9,26 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "src\Catalog\
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{617E713F-AA05-430D-84A9-DFAD60AEC42A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "src\Basket\Basket.API\Basket.API.csproj", "{4E9B9A70-1A30-4BAC-9FA8-4828F8B54B95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "src\Basket\Basket.API\Basket.API.csproj", "{4E9B9A70-1A30-4BAC-9FA8-4828F8B54B95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{472AC7A1-19B3-4299-9E22-BBF66A7FFE9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBusRabbitMQ", "src\Common\EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{43C1F14B-10E8-4164-8261-3599FF36F32C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusRabbitMQ", "src\Common\EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{43C1F14B-10E8-4164-8261-3599FF36F32C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{800074BC-93ED-47E6-B9B3-55BB81EBBAAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.API", "src\Ordering\Ordering.API\Ordering.API.csproj", "{0528B3F6-C93F-483A-B72C-B2A7C2D4F269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.API", "src\Ordering\Ordering.API\Ordering.API.csproj", "{0528B3F6-C93F-483A-B72C-B2A7C2D4F269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Core", "src\Ordering\Ordering.Core\Ordering.Core.csproj", "{050A460D-F850-4815-818C-CBD17A2C8C42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Core", "src\Ordering\Ordering.Core\Ordering.Core.csproj", "{050A460D-F850-4815-818C-CBD17A2C8C42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infraestructure", "src\Ordering\Ordering.Infraestructure\Ordering.Infraestructure.csproj", "{EDBC21E7-1A21-471A-8A66-E0583A765AC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infraestructure", "src\Ordering\Ordering.Infraestructure\Ordering.Infraestructure.csproj", "{EDBC21E7-1A21-471A-8A66-E0583A765AC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Application", "src\Ordering\Ordering.Application\Ordering.Application.csproj", "{3B0DC680-C74B-4BB5-97B1-0C75439718FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "src\Ordering\Ordering.Application\Ordering.Application.csproj", "{3B0DC680-C74B-4BB5-97B1-0C75439718FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4FBA581B-385C-4D08-9A92-6F14AF44321D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
